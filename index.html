@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board Professional</title>
+    <link rel="stylesheet" href="file/style.css">
+</head>
+
+<body>
+
+    <div class="kanban-container">
+        <!-- Header -->
+        <div class="kanban-header">
+            <h1>Project/Task Manangement</h1>
+        </div>
+
+        <!-- Board Area -->
+        <div class="kanban-board">
+            <!--To Do Column -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <h2>To Do</h2>
+                    <button class="add-task-btn" onclick="addTask()">+</button>
+                </div>
+
+                <div class="task-container" id="toDo">
+
+                </div>
+            </div>
+
+            <!-- In progress Column-->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <h2>In Progress</h2>
+                </div>
+
+                <div class="task-container" id="inProgress">
+
+                </div>
+            </div>
+
+            <!--Done Column-->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <h2>Done</h2>
+                </div>
+
+                <div class="task-container" id="done">
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!--Taks input Modal/ This is called modal box
+    It is also used as login or registration Form fill up -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="this.parentElement.parentElement.style.display='none';">&times;</span>
+            <textarea name="" id="task-input" placeholder="Enter Details Task..." rows="5"></textarea>
+            <button class="save-task-btn" onclick="saveTask()">Save Task</button>
+        </div>
+
+    </div>
+
+    <!--Single Global edit and delete button used for task can be edit or delete. -->
+    <div class="global-menu" id="globalMenu">
+        <div class="menu-item" id="editBtn">Edit</div>
+        <div class="menu-item" id="deleteBtn">Delete</div>
+    </div>
+
+
+    <!--Add footer for my own document.-->
+    <div class="footer">
+        <div class="footer-content">
+            <img src="file/mylogo2.png" alt="" class="footer-img">
+            <div class="footer-text">
+                &copy; <span id="year"></span>
+                <span id="username">Shanto.</span> All rights reserved.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="file/script.js"></script>
+
+</body>
+
+</html>
