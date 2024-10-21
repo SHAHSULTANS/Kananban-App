@@ -36,9 +36,32 @@ body {
     width: 33%;
 
 }
-.kanban-header{
+.kanban-header,#username{
     text-align:center;
     margin-bottom: 20px;
+    animation: AddTextShadow 2s linear  infinite alternate ;
+    color:rgb(255, 255, 0);
+}
+
+@keyframes AddTextShadow {
+    0%{text-shadow: 2px 2px 5px red,-2px -2px 5px green;}
+    25%{
+        text-shadow: 2px 2px 5px rgb(252, 164, 1), -2px -2px 5px blue;
+        
+    }
+    50%{
+        text-shadow: 2px 2px 5px crimson,-2px -2px 5px rgba(232, 252, 15, 0.657);
+    }
+    75%{
+        text-shadow: 2px 2px 5px rgb(220, 207, 20),-2px -2px 5px rgba(212, 5, 239, 0.884);
+        
+    }
+    100%{
+        text-shadow: 2px 2px 5px rgb(169, 233, 50),-2px -2px 5px rgba(249, 191, 0, 0.863);
+
+    }
+    
+    
 }
 
 .column-header,h2{
